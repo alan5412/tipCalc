@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+<body>
+
+  <main>
+    <div class="logo" >
+      <img  src="./images/logo.svg" alt="Spliter">
+    </div>
+    
+    <div class="first-container">
+        <div class="input-container">
+          <h4>Bill</h4>
+          <input class="input-container__in" type="number" placeholder="0" id="bill-input" required > 
+          <h4>Select Tip %</h4>
+          <div class="tip-container" >
+            <button class="tip-container__button" id="btn-5"  value="5">5%</button>
+            <button class="tip-container__button" id="btn-10" value="10">10%</button>
+            <button class="tip-container__button" id="btn-15" value="15">15%</button>
+            <button class="tip-container__button" id="btn-25" value="25">25%</button>
+            <button class="tip-container__button" id="btn-50" value="50">50%</button>
+            <input class="tip-container__custom" id="custom-input" type="number" placeholder="Custom">
+          </div>
+          <h4 class="title-container__people" >Number of People <span class="alert-person active" for="person-input"></span> </h4>
+          <input class="input-container__in" type="number" id="person-input" required  placeholder="0">
+        </div>
+
+        <div class="result-container">
+          <div class="reuslt-container__show">
+            <h4>Tip Amount <p>/ person</p> </h4>
+            <span class="result result-1" >$0.00</span>
+          </div>
+          <div class="reuslt-container__show">
+            <h4>Total <p>/ person</p> </h4>
+            <span class="result result-2" >$0.00</span>
+          </div>
+          <!-- <div class="reuslt-container__button"> -->
+            <button class="reset__button" id="btn-reset" >Reset</button>
+          <!-- </div> -->
+        </div>
+    </div>
+
+  </main> 
+  <script src="./app.js" ></script>
+</body>
+</html>

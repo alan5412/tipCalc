@@ -1,0 +1,217 @@
+:root{
+    --Strong-cyan: hsl(172, 67%, 45%);
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', serif;
+}
+
+body{
+    background-color: var(--Light-grayish-cyan);
+}
+
+
+/* Mobile First */
+main{
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    justify-content: center; 
+}
+
+.logo{
+    display: flex;
+    margin: 2rem 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-container{
+    background-color: white;
+    border-radius: 20px ;
+    padding: 2rem;
+}
+/* ----------------Input container------------- */
+.input-container{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.tip-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+/* grid tip */
+.tip-container__button{
+    background-color: var(--Very-dark-cyan);
+    color:white;
+    font-size: larger;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    padding: .5rem;
+}
+
+.tip-container__button:hover{
+    background-color: var(--Light-grayish-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+.tip-container__button.select{
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+.title-container__people{
+    display: flex;
+    justify-content: space-between;
+}
+
+.active{
+    color: orangered ;
+    
+}
+
+
+.tip-container__custom, .input-container__in{
+    font-size: larger;
+    border: none;
+    color: var(--Very-dark-cyan);
+    background-color: var(--Very-light-grayish-cyan);
+    font-weight: 600;
+    border-radius: 5px;
+    width: 100%;
+    text-align: end;
+    padding: 0 1rem;
+
+    outline-color: var(--Strong-cyan);
+}
+
+.input-container h4{
+    color:var( --Dark-grayish-cyan) ;
+}
+
+.input-container__in{
+    padding: .7rem;
+    margin-bottom: 2rem;
+    margin-top: .5rem;
+}
+
+.input-container__in.bad{
+    outline-color: orangered;
+}
+
+
+
+#bill-input{
+    background-image:url(./images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: 1rem;
+}
+
+#person-input{
+    background-image:url(./images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-position: 1rem;
+}
+
+/* ------------------Results Div-------------------- */
+
+.result-container{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    background-color: var(--Very-dark-cyan);
+    border-radius: 1rem;
+    padding: 3rem 1rem 1rem 1rem;
+    font-size: small;
+
+}
+
+.reuslt-container__show{
+    display: flex; 
+    justify-content: space-between;
+    font-weight: 600;
+    color: white;
+}
+
+.result-container button{
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+    font-weight: 600;
+    font-size: larger;
+    border-radius: 5px;
+    border: none;
+    padding: .5rem;
+    text-transform: uppercase;
+}
+
+.result-container button:hover{
+    background-color: var(--Light-grayish-cyan);
+}
+
+.result-container p{
+    color: var(--Grayish-cyan);
+    font-size: small;
+    font-weight: 600;
+}
+
+.result-container span{
+    color: var(--Strong-cyan);
+    font-size: xx-large;
+}
+
+
+/* for desktop */
+
+@media (min-width: 1024px) {
+    main{
+        margin: 5rem;
+
+    }
+    .first-container{
+        display: flex;
+        border-radius: 20px;
+        width: 70%;
+        height: 27rem;
+        margin-bottom: 4rem;
+        justify-content: center;
+        
+        gap: 2rem;
+    }
+    .input-container{
+        width: 50%;
+    }
+
+    .result-container{
+        width: 50%;
+        height: 100%;
+    }
+
+    .tip-container{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .logo{
+        margin-bottom: 4rem;
+    }
+
+    
+    .result-container button{
+       margin-top: 7rem;
+    }
+
+}
